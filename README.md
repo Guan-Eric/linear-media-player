@@ -1,40 +1,40 @@
 # Linear Media Player
 
-Hey, thanks for taking the time to work on this exercise. We're excited to see what you come up with –
-the goal is to create an audio player for playing a predefined playlist of audio files. Think of it
-like a stripped-down version of Spotify or the classic Winamp.
+## Project Overview
 
-### Getting started
+- **Display**: Shows current track name, artist, and release year from playlist metadata.
+- **Controls**: Play/Pause, Next, Previous, Shuffle, Loop, Mute/Unmute, Volume slider.
+- **Seek**: Touchable progress bar with timestamps (current time / total duration).
+- **Cover Art**: Displays album cover based on playlist.
 
-Clone this repo which was created _just for you_, make it yours and let us know once the project is complete by pushing
-your commits and replying through email. 
+## Screenshot
 
-You can use `npm` to install the dependencies and run the basic React project. Feel free to add any additional libraries 
-or frameworks you need.
+![App Screenshot](./assets/screenshot.png)
 
-```bash
-npm install
-npm run dev
-```
+## Deployment
 
-### Requirements
+This app is deployed on Vercel:
 
-We'd like to see a working media player that can play through a playlist of audio files (included), display info on the
-currently playing track and supporting basic functionality like play/pause, next track, etc. Beyond that, feel free to get
-creative with the design and functionality.
+- **GitHub repo**: [https://github.com/Guan-Eric/linear-media-player](https://github.com/Guan-Eric/linear-media-player)
+- **Deployed app**: [https://linear-media-player-psi.vercel.app/](https://linear-media-player-psi.vercel.app/)
 
-Plan on spending 2-4 hours to complete this exercise.
+## Component Structure
 
-Please update this README to include a screenshot of the completed exercise at the top.
+- **MediaPlayer.tsx**: Main wrapper, state management, and audio element.
+- **PlayerHeader.tsx**: Playlist selector and title bar.
+- **NowPlaying.tsx**: Shows track details (name, artist, year, cover art), and controls.
+- **CurrentPlaylist.tsx**: Scrollable track list.
 
-### Playlist data
+## Technologies
 
-The playlist data is stored in `src/data/playlists.json`. It includes a list of audio files and some associated metadata,
-you can import the json file directly with no need for network requests.
+- **Framework**: React + Vite
+- **Styling**: Tailwind CSS
+- **Icons**: React Icons (Font Awesome)
+- **Deployment**: Vercel
 
-### Attribution
+## Attribution
 
 This project includes music from the following albums:
 
-- **"Deep House"** by _Nul Tiel Records_ is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-- **"Neither and Both"** by _Brylie Christopher Oxley_ is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- "Deep House" by Nul Tiel Records is licensed under CC BY-NC-SA 4.0.
+- "Neither and Both" by Brylie Christopher Oxley is licensed under CC BY 4.0.

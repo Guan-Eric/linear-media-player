@@ -6,7 +6,7 @@ export interface Track {
 
 export interface Playlist {
   name: string;
-  artist: number;
+  artist: string;
   year: number;
   tracks: Track[];
 }

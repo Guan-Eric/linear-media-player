@@ -7,8 +7,8 @@ import playlistsData from "../src/data/playlists.json";
 import { Playlist, Track } from "./types";
 
 export default function MediaPlayer() {
-  const [currentPlaylistIndex, setCurrentPlaylistIndex] = useState(0);
-  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+  const [currentPlaylistIndex, setCurrentPlaylistIndex] = useState<number>(0);
+  const [currentTrackIndex, setCurrentTrackIndex] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const audioRef = useRef(null);

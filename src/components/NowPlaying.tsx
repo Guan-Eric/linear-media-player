@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { Playlist, Track } from "../types";
-import deepHouseCover from "../assets/deep_house_album_cover.jpg";
-import neitherCover from "../assets/neither_and_both_album_cover.jpg";
 import {
   FaRandom,
   FaRedo,
@@ -12,6 +10,8 @@ import {
   FaVolumeMute,
   FaVolumeUp,
 } from "react-icons/fa";
+import deepHouseCover from "../assets/deep_house_album_cover.jpg";
+import neitherCover from "../assets/neither_and_both_album_cover.jpg";
 
 interface NowPlayingProps {
   currentTrack: Track;
@@ -91,7 +91,7 @@ export default function NowPlaying({
     if (isLooping) {
       setProgress(0);
       setIsPlaying(true);
-      audio.play();
+      audio?.play();
     } else if (isShuffled) {
       let randomIndex = currentIndex;
       while (randomIndex == currentIndex) {
@@ -99,9 +99,7 @@ export default function NowPlaying({
       }
       setCurrentTrackIndex(randomIndex);
     } else {
-      setCurrentTrackIndex(
-        (prevIndex) => (prevIndex + 1) % currentPlaylist.tracks.length
-      );
+      setCurrentTrackIndex((currentIndex + 1) % currentPlaylist.tracks.length);
     }
   };
 
@@ -111,8 +109,10 @@ export default function NowPlaying({
       setTrackHistory((prev) => prev.slice(0, -1)); // remove last
       setCurrentTrackIndex(lastIndex);
     } else {
-      setCurrentTrackIndex((prevIndex) =>
-        prevIndex === 0 ? currentPlaylist.tracks.length - 1 : prevIndex - 1
+      setCurrentTrackIndex(
+        currentIndex === 0
+          ? currentPlaylist.tracks.length - 1
+          : currentIndex - 1
       );
     }
   };

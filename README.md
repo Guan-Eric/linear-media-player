@@ -9,7 +9,7 @@
 
 ## Screenshot
 
-![App Screenshot](./assets/screenshot.png)
+![App Screenshot](./src/assets/screenshot.png)
 
 ## Deployment
 

@@ -142,7 +142,9 @@ export default function NowPlaying({
       <div className="grid grid-cols-3 items-center mt-4">
         <div>
           <h3 className="text-lg font-semibold">{currentTrack.name}</h3>
-          <p className="text-sm text-gray-400">{currentPlaylist.artist}</p>
+          <p className="text-sm text-gray-400">
+            {currentPlaylist.artist} • {currentPlaylist.year}
+          </p>
         </div>
         <div className="flex justify-center items-center gap-4 ">
           <button className="cursor-pointer" onClick={toggleShuffle}>
